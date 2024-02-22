@@ -1,0 +1,12 @@
+.answer {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.true {
+  color: green;
+}
+
+.false {
+  color: red;
+}

@@ -1,0 +1,3 @@
+<h3 [innerHTML]="getQuestionNumbering() + question.question"></h3>
+<app-choice *ngIf="isChoice()" [choice]="getChoice()"> </app-choice>
+<app-true-false *ngIf="isTrueFalse()" [trueFalse]="getTrueFalse()"> </app-true-false>

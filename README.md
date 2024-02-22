@@ -1,4 +1,4 @@
-# QuizzGenerator
+# QuizGenerator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
@@ -12,7 +12,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
+
+## Deploy
+
+To deploy on the github pages run `ng build --configuration gh-pages` while on the master branch and then push the files generated in the `docs/` directory.
+Deployment will happen automatically after that.
+Make sure to add unversioned files when pushing.
 
 ## Running unit tests
 

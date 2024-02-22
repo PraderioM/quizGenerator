@@ -1,0 +1,6 @@
+<div *ngFor="let option of choice.options; index as i">
+  <br>
+  <span [innerHTML]="getOptionNumbering(i) + option.option"></span>
+  <span [ngClass]="getClass(option.selected)"
+                          (click)="choice.selectOption(i)">&ensp;{{getBoolString(option.selected)}}</span>
+</div>

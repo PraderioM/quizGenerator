@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "quizz-generator": {
+    "quiz-generator": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/quizz-generator",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,6 +30,22 @@
             "scripts": []
           },
           "configurations": {
+            "gh-pages": {
+              "baseHref": "https://praderiom.github.io/quizGenerator/",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1500kb",
+                  "maximumError": "2mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "3.8kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "production": {
               "budgets": [
                 {
@@ -60,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "quizz-generator:build:production"
+              "browserTarget": "quiz-generator:build:production"
             },
             "development": {
-              "browserTarget": "quizz-generator:build:development"
+              "browserTarget": "quiz-generator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "quizz-generator:build"
+            "browserTarget": "quiz-generator:build"
           }
         },
         "test": {

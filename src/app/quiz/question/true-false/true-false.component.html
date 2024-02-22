@@ -1,0 +1,6 @@
+<div *ngFor="let option of trueFalse.options; index as i">
+  <br>
+  <span [innerHTML]="getOptionNumbering(i) + option.option"></span>
+
+  <span [ngClass]="getClass(option.is_true)" (click)="option.toggleIsTrue()">&ensp;{{getBoolString(option.is_true)}}</span>
+</div>
