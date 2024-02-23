@@ -46,7 +46,7 @@ export class AppComponent {
     if (this.name === '') {
       return false;
     }
-    if (this.surname !== '') {
+    if (this.surname === '') {
       return false
     }
     return this.selectedWorkshop !== this.DEFAULT_WORKSHOP

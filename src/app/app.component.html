@@ -20,9 +20,11 @@
 
   </p>
   <p  *ngIf="isNameComplete()">
-    <b>IMPORTANT. YOU NEED TO SEND THE RESULTS TO YOUR WORKSHOP TUTOR OTHERWISE THE QUIZ WILL NOT BE MARKED.
+    <b style="color: red">IMPORTANT. YOU NEED TO SEND THE RESULTS TO YOUR WORKSHOP TUTOR OTHERWISE THE QUIZ WILL NOT BE MARKED.
     THIS PAGE WAS DEVELOPED BY MARCO PRADERIO AND IS INDEPENDENT FROM THE LANCASTER UNIVERSITY MOODLE.
     </b>
   </p>
-  <button *ngIf="isNameComplete()" (click)="downloadDocuments()">Download answers</button>
+  <span *ngIf="isNameComplete()" >
+    <button (click)="downloadDocuments()">Download answers</button> Clicking here you will be downloading 2 files.
+  </span>
 </div>

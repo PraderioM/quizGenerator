@@ -5,4 +5,5 @@
 
 .selected {
   font-weight: bolder;
+  color: green;
 }
