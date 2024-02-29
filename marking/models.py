@@ -1,5 +1,4 @@
 from typing import Dict, List, Union
-from json import loads
 
 QuestionType = Union['CHOICE', 'TRUE-FALSE']
 OptionType = QuestionType
@@ -35,7 +34,7 @@ class ChoiceOption(Option):
 class TrueFalseOption(Option):
     TYPE = 'TRUE-FALSE'
 
-    def __init__(self, option: str, is_true: bool):
+    def __init__(self, option: str, is_true: str):
         super().__init__(option=option)
         self.is_true = is_true
 
@@ -161,13 +160,12 @@ class Quiz:
         self.questions = questions
 
     @classmethod
-    def fromJSON(cls, json_data: Dict[str: Union[str, List[Question]]]):
-        data = loads(json_data)
-        questions = [Question.fromJSON(question) for question in data["questions"]]
+    def fromJSON(cls, json_data: Dict[str, Union[str, List[Question]]]):
+        questions = [Question.fromJSON(question) for question in json_data["questions"]]
 
-        return cls(title=data["title"],
-                   name=data["name"], surname=data["surname"],
-                   workshop=data["workshop"], tutor=data["tutor"],
+        return cls(title=json_data["title"],
+                   name=json_data["name"], surname=json_data["surname"],
+                   workshop=json_data["workshop"], tutor=json_data["tutor"],
                    questions=questions)
 
     def getPoints(self):
@@ -180,11 +178,11 @@ class Quiz:
     def getMark(self, answer) -> float:
         mark = 0.
         for i in range(len(self.questions)):
-            mark += self.questions[i].getMark(answer=answer.options[i])
+            mark += self.questions[i].getMark(answer=answer.questions[i])
 
         return mark
 
-    def getErrorReport(self, answer) -> Dict[str: Dict[str:int]]:
+    def getErrorReport(self, answer) -> Dict[str, Dict[str, int]]:
         error_report = {}
 
         for i in range(len(self.questions)):

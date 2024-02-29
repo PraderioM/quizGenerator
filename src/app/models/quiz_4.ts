@@ -37,13 +37,13 @@ export const QUIZ_4 = new Quiz(
       [
         new ChoiceOption('Z(R)={0};'),
         new ChoiceOption('Z(R)={zI<sub>3</sub> | z&#8712;&Copf;}, the scalar matrices;'),
-        new ChoiceOption('Z(R)={GL<sub>3</sub>(&Ropf;), the inverible matrices with real entries;'),
-        new ChoiceOption('Z(R)={GL<sub>3</sub>(&Copf;), the inverible matrices;'),
+        new ChoiceOption('Z(R)={GL<sub>3</sub>(&Ropf;), the invertible matrices with real entries;'),
+        new ChoiceOption('Z(R)={GL<sub>3</sub>(&Copf;), the invertible matrices;'),
         new ChoiceOption('Z(R)=R.')
       ]
     ),
     new Choice(
-      `An edempotent in a ring R is an element e&#8712;R with the property e<sup>2</sup>=e.
+      `An idempotent in a ring R is an element e&#8712;R with the property e<sup>2</sup>=e.
       So, for instance 0<sub>R</sub> is an idempotent in any ring, and 1<sub>R</sub> is too in any ring
       with a multiplicative identity. Consider the ring R=M<sub>2</sub>(&Copf;).
       <br>

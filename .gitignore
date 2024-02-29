@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 /marking/quiz-answers/
 /marking/solution.json
+/marking/marks
+/marking/error_report
