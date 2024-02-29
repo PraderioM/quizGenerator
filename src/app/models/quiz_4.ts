@@ -31,7 +31,7 @@ export const QUIZ_4 = new Quiz(
       <p style="text-align:center">
       Z(R)={a&#8712;R | ab=ba &#8704; b&#8712;R}
       </p>
-      of R. let R=M<sub>3</sub>(&Copf;). Which one of the following is true?
+      of R. Let R=M<sub>3</sub>(&Copf;). Which one of the following is true?
       <br>
       [Hint: try to eliminate possible wrong answers, rather than working out Z(R).] [3 marks]`,
       [
