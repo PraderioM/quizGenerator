@@ -44,7 +44,7 @@ def print_error_report(errors: Dict[str, Dict[str, int]], total_answers: int,
 
     print('The following are the percentages of mistakes per question made (from most to least common):')
     lines: List[str] = []
-    msg = 'Question\t\terror%'
+    msg = 'Question\terror%'
     print(msg)
     lines.append(msg)
 

@@ -189,7 +189,7 @@ class Quiz:
             question = self.questions[i]
             errors = question.getDifferentAnswers(answer=answer.questions[i])
             error_report['QUESTION ' + str(i+1)] = {
-                self.LETTERS[j]+')': (0 if j in errors else 1) for j in range(len(question.options))
+                self.LETTERS[j]+')': (1 if j in errors else 0) for j in range(len(question.options))
             }
 
         return error_report
