@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Quiz} from "./models/quiz";
-import {QUIZ_4} from "./models/quiz_4";
+import {QUIZ_5} from "./models/quiz_5";
 import {Tutor, TUTORS} from "./models/tutors";
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'quiz-generator';
   name: string = '';
   surname: string = '';
-  quiz: Quiz = QUIZ_4;
+  quiz: Quiz = QUIZ_5;
   DEFAULT_WORKSHOP = 'select your workshop';
   MOCK_TUTOR: Tutor = new Tutor('name', 'surname', 'email', []);
   selectedWorkshop: string = this.DEFAULT_WORKSHOP;
