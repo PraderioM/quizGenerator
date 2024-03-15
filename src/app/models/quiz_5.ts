@@ -16,7 +16,7 @@ export const QUIZ_5 = new Quiz(
       ]
       ),
     new Choice(`Consider the subrings<br>
-        <img alt="equations" src="/assets/equations.png">
+        <img alt="equations" src="assets/equations.png">
     <br>of M<sub>3</sub>(C). Which of the following statements holds? [3 marks]<br>
 [Hint. Start by taking two matrices in each of the forms above and looking at what form their product must take.
 From this, you might deduce that the subring in question is commutative (or not), and so on.]`,
@@ -57,7 +57,7 @@ Let φ:Z[x,y]&#8594;Z[x] be the map defined by φ(f(x,y))=f(x,x). Which of the f
         new ChoiceOption('tr: M<sub>2</sub>(C)&#8594;C mapping a matrix to its trace'),
         new ChoiceOption('ɛ<sub>i</sub>: Z[x]&#8594;C mapping f(x) to its evaluation f(i) at i&#8712 C'),
         new ChoiceOption(`φ: Z[i]&#8594;M<sub>2</sub>(Z) mapping each Gaussian integer a+ib to
-        <img class="center-ver" middle;" alt="matrix" src="/assets/matrix.png">`
+        <img class="center-ver" middle;" alt="matrix" src="assets/matrix.png">`
         ),
         new ChoiceOption('None of the above')
       ]
