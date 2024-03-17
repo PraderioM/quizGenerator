@@ -62,15 +62,15 @@ Let φ:Z[x,y]&#8594;Z[x] be the map defined by φ(f(x,y))=f(x,x). Which of the f
         new ChoiceOption('None of the above')
       ]
     ),
-    new TrueFalse(
-      'For each of the following five statement, decide wheter it is true or false. [5 marks]',
-      [
-        new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then Ker(φ) is an ideal of R.'),
-        new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then Im(φ) is an ideal of S.'),
-        new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then S&#8773;R/Ker(φ).'),
-        new TrueFalseOption('If φ: R&#8594;S is an injective ring homomorphism between rings R and S, then R&#8773;S/Im(φ).'),
-        new TrueFalseOption('If φ: R&#8594;S is a surjective ring homomorphism between rings R and S, then S&#8773;R/Ker(φ).')
-      ]
-    )
+    // new TrueFalse(
+    //   'For each of the following five statement, decide wheter it is true or false. [5 marks]',
+    //   [
+    //     new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then Ker(φ) is an ideal of R.'),
+    //     new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then Im(φ) is an ideal of S.'),
+    //     new TrueFalseOption('If φ: R&#8594;S is a ring homomorphism between rings R and S, then S&#8773;R/Ker(φ).'),
+    //     new TrueFalseOption('If φ: R&#8594;S is an injective ring homomorphism between rings R and S, then R&#8773;S/Im(φ).'),
+    //     new TrueFalseOption('If φ: R&#8594;S is a surjective ring homomorphism between rings R and S, then S&#8773;R/Ker(φ).')
+    //   ]
+    // )
   ]
 )
