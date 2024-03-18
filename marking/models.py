@@ -150,6 +150,8 @@ class TrueFalse(Question):
 
 class Quiz:
     LETTERS = 'abcdefghijklmnopqrstuvwxyz'
+    QUESTION_PREFIX = 'QUESTION '
+    QUESTION_SUFFIX = ')'
 
     def __init__(self, title: str, name: str, surname: str, workshop: str, tutor: str, questions: List[Question]):
         self.title = title
@@ -188,8 +190,8 @@ class Quiz:
         for i in range(len(self.questions)):
             question = self.questions[i]
             errors = question.getDifferentAnswers(answer=answer.questions[i])
-            error_report['QUESTION ' + str(i+1)] = {
-                self.LETTERS[j]+')': (1 if j in errors else 0) for j in range(len(question.options))
+            error_report[self.QUESTION_PREFIX + str(i+1)] = {
+                self.LETTERS[j]+self.QUESTION_SUFFIX: (1 if j in errors else 0) for j in range(len(question.options))
             }
 
         return error_report
