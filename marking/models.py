@@ -1,4 +1,4 @@
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Type
 
 QuestionType = Union['CHOICE', 'TRUE-FALSE']
 OptionType = QuestionType
@@ -104,10 +104,19 @@ class Choice(Question):
         return self._points_correct
 
     def getDifferentAnswers(self, answer: Question):
+        n_selected = 0
+        # First check for a selected answer that is wrong.
         for i in range(len(self.options)):
-            if self.options[i].selected != answer.options[i].selected:
-                return [i]
+            if answer.options[i].selected:
+                n_selected += 1
+                if self.options[i].selected != answer.options[i].selected:
+                    return [i]
 
+        # If there is no selected answer we return an error on an impossible selected answer.
+        if n_selected > 0:
+            return [len(self.options)]
+
+        # Otherwise there is no error.
         return []
 
 
@@ -195,3 +204,18 @@ class Quiz:
             }
 
         return error_report
+
+    def getQuestionTypes(self) -> Dict[str, Type]:
+        question_types = {}
+
+        for i in range(len(self.questions)):
+            question = self.questions[i]
+            question_name = self.QUESTION_PREFIX + str(i+1)
+            if isinstance(question, TrueFalse):
+                question_types[question_name] = TrueFalse
+            elif isinstance(question, Choice):
+                question_types[question_name] = Choice
+            else:
+                raise TypeError(f'Question of type {type(question)} is not recognized.')
+
+        return question_types
