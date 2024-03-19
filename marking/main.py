@@ -95,7 +95,9 @@ def print_feed_back(feed_back: Dict[str, Dict[str, List[Tuple[str, str]]]],
         msg = f'\n\nWORKSHOP: {workshop}'
         print(msg)
         lines.append(msg)
-        for student, errors in error_dict.items():
+        aux = [(student, errors) for student, errors in error_dict.items()]
+        aux.sort(key=lambda tup: tup[0])
+        for student, errors in aux:
             if len(errors) == 0:
                 error_str = 'No errors perfect submission.'
             else:
