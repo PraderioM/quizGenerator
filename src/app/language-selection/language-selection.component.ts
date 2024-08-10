@@ -8,14 +8,15 @@ import {TranslatableText} from "../models/translatable_text";
   styleUrls: ['./language-selection.component.css']
 })
 export class LanguageSelectionComponent {
-  @Input() lang: LANGUAGE = 'english'
   @Output() changeLanguage :EventEmitter<LANGUAGE> = new EventEmitter<LANGUAGE>();
 
-  protected readonly LANGUAGES = LANGUAGES;
+  protected readonly LANGUAGES: LANGUAGE[] = LANGUAGES;
+  lang: LANGUAGE = 'english'
   languageSelectText: TranslatableText = new TranslatableText('Select your language', 'Selecciona tu lengua', 'Selezziona la tua lingua', 'Selecciona la teva llengua')
   languageText: TranslatableText = new TranslatableText('English', 'Español', 'Italiano', 'Català')
 
   updateLanguage(lang: LANGUAGE): void {
+    this.lang = lang;
     this.changeLanguage.emit(lang);
   }
 }
