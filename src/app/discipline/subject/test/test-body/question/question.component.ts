@@ -20,7 +20,7 @@ export class QuestionComponent implements OnChanges{
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['attempt'] && !changes['attempt'].firstChange && changes['attempt'].currentValue !== 0) {
-      if (changes['attempt'].currentValue - changes['attempt'].previousValue) {
+      if (changes['attempt'].currentValue - changes['attempt'].previousValue > 0) {
         this.isCorrect = this.question.isCorrect();
       }
     }
