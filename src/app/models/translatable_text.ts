@@ -32,3 +32,5 @@ export class TranslatableText {
     }
   }
 }
+
+export const MOCK_TRANSLATABLE_TEXT = new TranslatableText('', '', '', '')

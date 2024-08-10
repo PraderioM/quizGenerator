@@ -1,9 +1,10 @@
-import {Quiz} from "../../../models/quiz";
+import {Test} from "../../../models/test";
 import {TrueFalse, TrueFalseOption} from "../../../models/questions/true.false";
 import {Choice, ChoiceOption} from "../../../models/questions/choice";
+import {TranslatableText} from "../../../models/translatable_text";
 
-export const Quiz_00 = new Quiz(
-  'MATH 225 Quiz 4',
+export const Test_00 = new Test(
+  new TranslatableText('Test 00'),
   [
     new TrueFalse(
       'Decide whether each of the following statements is true or false [12 marks]',

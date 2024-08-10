@@ -1,0 +1,2 @@
+<app-test-selection [lang]="lang" [subj]="subj" (changeTest)="updateTest($event)"></app-test-selection>
+<app-test-body *ngIf="isTestSelected" [lang]="lang" [test]="test"></app-test-body>

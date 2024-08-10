@@ -1,0 +1,8 @@
+<div class="main-container">
+  <h3>{{ testSelectText.getText(lang) }}</h3>
+  <p class="test-container">
+    <span *ngFor="let test of subj.tests">
+      <button (click)="updateTest(test)">{{ test.getName(lang) }}</button>
+    </span>
+  </p>
+</div>

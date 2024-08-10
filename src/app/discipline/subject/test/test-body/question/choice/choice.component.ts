@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Choice, MOCK_CHOICE} from "../../../models/questions/choice";
+import {Choice, MOCK_CHOICE} from "../../../../../../models/questions/choice";
 
 @Component({
   selector: 'app-choice',

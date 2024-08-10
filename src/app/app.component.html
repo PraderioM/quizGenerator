@@ -1,36 +1,4 @@
 <div style="width:600pt">
   <app-language-selection [lang]="lang" (changeLanguage)="updateLanguage($event)"></app-language-selection>
   <app-discipline [lang]="lang"></app-discipline>
-<!--  <p *ngIf="!isNameComplete()">You must write both your name, surname and workshop number before starting the quiz</p>-->
-<!--  <p>-->
-<!--    Name <input type="text" [(ngModel)]="name" placeholder="Name">-->
-<!--    &emsp;-->
-<!--    Surname <input type="text" [(ngModel)]="surname" placeholder="Surname">-->
-<!--    &emsp;-->
-<!--    Workshop <select #ws name="workshop" (change)="updateSelectedWorkshop(ws.value)">-->
-<!--                 <option *ngFor="let workshop of getWorkshops()"-->
-<!--                         [value]="workshop">{{workshop}}{{getTutorName(workshop)}}</option>-->
-<!--             </select>-->
-<!--  </p>-->
-<!--  <app-quiz *ngIf="isNameComplete()" [quiz]="quiz"></app-quiz>-->
-<!--  <h2 *ngIf="isNameComplete()">-->
-<!--    You have reached the end of the test.-->
-<!--    <br>-->
-<!--    press the button below to download the answers and submit the downloaded files to your workshop tutor ({{getTutor(selectedWorkshop).getFullName()}}) via e-mail at ({{getTutor(selectedWorkshop).getEmail()}})-->
-<!--    <br>-->
-<!--    You can check that your answers where recorded correctly by opening the downloaded html file in your browser.-->
-
-<!--  </h2>-->
-<!--  <h2  *ngIf="isNameComplete()">-->
-<!--    <b style="color: red">IMPORTANT. YOU NEED TO SEND THE RESULTS TO YOUR WORKSHOP TUTOR OTHERWISE THE QUIZ WILL NOT BE MARKED.-->
-<!--    THIS PAGE WAS DEVELOPED BY MARCO PRADERIO AND IS INDEPENDENT FROM THE LANCASTER UNIVERSITY MOODLE.-->
-<!--    </b>-->
-<!--  </h2>-->
-<!--  <h2 *ngIf="isNameComplete()" >-->
-<!--    Clicking <button (click)="downloadJSON()" style="font-weight: bolder; font-size: large">HERE</button> you will download a .JSON file you need to send to your workshop tutor.-->
-<!--    <br>-->
-<!--    YOU <u>MUST</u> SEND THESE FILES TO YOUR WORKSHOP TUTOR (SEE ABOVE).-->
-<!--    <br>-->
-<!--    Clicking <button (click)="downloadHTML()" style="font-weight: bolder; font-size: large">HERE</button> you will download an HTML file with a copy of your answers that you can keep for review.-->
-<!--  </h2>-->
 </div>

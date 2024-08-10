@@ -1,7 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {MOCK_QUESTION, Question} from "../../models/questions/question";
-import {MOCK_TRUE_FALSE, TrueFalse} from "../../models/questions/true.false";
-import {Choice, MOCK_CHOICE} from "../../models/questions/choice";
+import {MOCK_QUESTION, Question} from "../../../../../models/questions/question";
+import {MOCK_TRUE_FALSE, TrueFalse} from "../../../../../models/questions/true.false";
+import {Choice, MOCK_CHOICE} from "../../../../../models/questions/choice";
+import {LANGUAGE} from "../../../../../models/constants";
 
 @Component({
   selector: 'app-question',
@@ -9,6 +10,7 @@ import {Choice, MOCK_CHOICE} from "../../models/questions/choice";
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent {
+  @Input() lang: LANGUAGE = 'english';
   @Input() question: Question = MOCK_QUESTION;
   @Input() questionNumber: number = 0;
 

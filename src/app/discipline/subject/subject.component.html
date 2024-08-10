@@ -1,0 +1,9 @@
+<div class="main-container">
+  <h3>{{ subjectSelectText.getText(lang) }}</h3>
+  <p class="subject-container">
+    <span *ngFor="let subj of disc.subjects">
+      <button (click)="updateSubject(subj)">{{ subj.getName(lang) }}</button>
+    </span>
+  </p>
+</div>
+<app-test *ngIf="isSubjectSelected" [lang]="lang" [subj]="subj"></app-test>

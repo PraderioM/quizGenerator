@@ -2,7 +2,8 @@
   <h3>{{ disciplineSelectText.getText(lang) }}</h3>
   <p class="discipline-container">
     <span *ngFor="let disc of DISCIPLINES">
-      <button>{{ disc.getName(lang) }}</button>
+      <button (click)="updateDiscipline(disc)">{{ disc.getName(lang) }}</button>
     </span>
   </p>
 </div>
+<app-subject *ngIf="isDisciplineSelected" [lang]="lang" [disc]="disc"></app-subject>

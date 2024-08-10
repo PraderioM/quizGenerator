@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {MOCK_TRUE_FALSE, TrueFalse} from "../../../models/questions/true.false";
+import {MOCK_TRUE_FALSE, TrueFalse} from "../../../../../../models/questions/true.false";
 
 @Component({
   selector: 'app-true-false',

@@ -1,9 +1,10 @@
-import {Quiz} from "../../../models/quiz";
+import {Test} from "../../../models/test";
 import {TrueFalse, TrueFalseOption} from "../../../models/questions/true.false";
 import {Choice, ChoiceOption} from "../../../models/questions/choice";
+import {TranslatableText} from "../../../models/translatable_text";
 
-export const Quiz_01 = new Quiz(
-  'MATH 225 Quiz 5',
+export const Test_01 = new Test(
+  new TranslatableText('Test 01'),
   [
     new Choice(
       'The multiplicative inverse of <span class="equivalence-class">365</span> in Z<sub>2019</sub> is: [3 marks]',
