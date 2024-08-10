@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Choice, MOCK_CHOICE} from "../../../../../../models/questions/choice";
+import {LANGUAGE} from "../../../../../../models/constants";
 
 @Component({
   selector: 'app-choice',
@@ -9,6 +10,7 @@ import {Choice, MOCK_CHOICE} from "../../../../../../models/questions/choice";
 export class ChoiceComponent {
   LETTERS = 'abcdefghijklmnopqrstuvwxyz'
   @Input() choice: Choice = MOCK_CHOICE;
+  @Input() lang: LANGUAGE = 'english';
 
   getBoolString(selected: boolean) {
     return selected? 'SELECTED': 'CLICK TO SELECT';

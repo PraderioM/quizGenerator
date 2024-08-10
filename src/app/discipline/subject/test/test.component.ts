@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {LANGUAGE} from "../../../models/constants";
 import {MOCK_SUBJECT, Subject} from "../../../models/subject";
 import {Test, MOCK_TEST} from "../../../models/test";

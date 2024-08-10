@@ -12,6 +12,7 @@ import { SubjectComponent } from './discipline/subject/subject.component';
 import { TestComponent } from './discipline/subject/test/test.component';
 import { TestSelectionComponent } from './discipline/subject/test/test-selection/test-selection.component';
 import { TestBodyComponent } from './discipline/subject/test/test-body/test-body.component';
+import { OpenComponent } from './discipline/subject/test/test-body/question/open/open.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TestBodyComponent } from './discipline/subject/test/test-body/test-body
     SubjectComponent,
     TestComponent,
     TestSelectionComponent,
-    TestBodyComponent
+    TestBodyComponent,
+    OpenComponent
   ],
   imports: [
     BrowserModule,

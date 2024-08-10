@@ -1,3 +1,7 @@
-<h3 [innerHTML]="getQuestionNumbering() + question.question"></h3>
-<app-choice *ngIf="isChoice()" [choice]="getChoice()"> </app-choice>
-<app-true-false *ngIf="isTrueFalse()" [trueFalse]="getTrueFalse()"> </app-true-false>
+<h3 [ngClass]="getQuestionClass()" [innerHTML]="getQuestionNumbering() + question.question.getText(lang)"></h3>
+<div *ngIf="isCorrect !== null && !isCorrect">
+  <h4 *ngFor="let hint of getHints()" [innerHTML]="'Hint:' + hint.hint.getText(lang)"></h4>
+</div>
+<app-choice *ngIf="isChoice()" [lang]="lang" [choice]="getChoice()"> </app-choice>
+<app-true-false *ngIf="isTrueFalse()" [lang]="lang" [trueFalse]="getTrueFalse()"> </app-true-false>
+<app-open *ngIf="isOpen()" [lang]="lang" [open]="getOpen()"> </app-open>

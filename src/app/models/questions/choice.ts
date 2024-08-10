@@ -1,51 +1,14 @@
-import {Question} from "./question";
+import {Hint, Question} from "./question";
+import {MOCK_TRANSLATABLE_TEXT, TranslatableText} from "../translatable_text";
 
 export class ChoiceOption {
-  LETTERS = 'abcdefghijklmnopqrstuvwxyz'
-
-  constructor(public option: string, public selected: boolean = false) {
-  }
-
-  toHTMLCode(optionNumber: number):string {
-    return `
-    &emsp;`+this.LETTERS[optionNumber]+`) `+this.option+`&ensp;<b>`+this.getSelectedString()+`</b>
-`
-  }
-
-  getSelectedString() {
-    return this.selected? 'SELECTED': 'NOT SELECTED';
-  }
-
-  toJSON():object {
-    return {
-      'option': this.option,
-      'selected': this.selected,
-    }
+  constructor(public option: TranslatableText, public selected: boolean = false) {
   }
 }
 
 export class Choice extends Question {
-  constructor(question: string, public options: ChoiceOption[]) {
-    super(question, 'CHOICE');
-  }
-
-  override getHTMLCodeOptions(): string {
-    let outHTMLCode = '';
-    let i = 0;
-    for (let option of this.options) {
-      outHTMLCode = outHTMLCode + `
-    <br>` + option.toHTMLCode(i);
-      i = i + 1;
-    }
-    return outHTMLCode;
-  }
-
-  override getOptionsJSON(): object[] {
-    let options: object[] = [];
-    for (let option of this.options) {
-      options.push(option.toJSON());
-    }
-    return options;
+  constructor(question: TranslatableText, public options: ChoiceOption[], private correct_option: number, hints: Hint[] = []) {
+    super(question, 'CHOICE', hints);
   }
 
   getSelectedOption(): number {
@@ -72,6 +35,10 @@ export class Choice extends Question {
     }
   }
 
+  override isCorrect(): boolean {
+    return this.correct_option === this.getSelectedOption();
+  }
+
 }
 
-export const MOCK_CHOICE = new Choice('question', []);
+export const MOCK_CHOICE = new Choice(MOCK_TRANSLATABLE_TEXT, [], -1);

@@ -2,5 +2,9 @@
 <app-question *ngFor="let question of test.questions; index as i"
               [lang]="lang"
               [question]="question"
-              [questionNumber]="i">
+              [questionNumber]="i"
+              [attempt]="attempt">
 </app-question>
+<p>
+  <button (click)="newAttempt()">{{checkAnswers.getText(lang)}}</button>
+</p>
