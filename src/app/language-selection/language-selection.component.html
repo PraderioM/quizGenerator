@@ -1,0 +1,8 @@
+<div class="main-container">
+  <h3>{{ languageSelectText.getText(lang) }}</h3>
+  <p class="language-container">
+    <span *ngFor="let lang of LANGUAGES">
+      <button (click)="updateLanguage(lang)">{{languageText.getText(lang)}}</button>
+    </span>
+  </p>
+</div>

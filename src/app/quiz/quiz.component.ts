@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Quiz} from "../models/quiz";
-import {QUIZ_4} from "../models/quiz_4";
+import {Quiz_00} from "../data/maths/abstract-algebra/quiz_00";
 
 @Component({
   selector: 'app-quiz',
@@ -8,6 +8,6 @@ import {QUIZ_4} from "../models/quiz_4";
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
-  @Input() quiz: Quiz = QUIZ_4;
+  @Input() quiz: Quiz = Quiz_00;
 
 }

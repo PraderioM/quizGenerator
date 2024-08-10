@@ -1,0 +1,8 @@
+<div class="main-container">
+  <h3>{{ disciplineSelectText.getText(lang) }}</h3>
+  <p class="discipline-container">
+    <span *ngFor="let disc of DISCIPLINES">
+      <button>{{ disc.getName(lang) }}</button>
+    </span>
+  </p>
+</div>

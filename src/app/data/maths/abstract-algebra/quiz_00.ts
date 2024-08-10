@@ -1,8 +1,8 @@
-import {Quiz} from "./quiz";
-import {TrueFalse, TrueFalseOption} from "./questions/true.false";
-import {Choice, ChoiceOption} from "./questions/choice";
+import {Quiz} from "../../../models/quiz";
+import {TrueFalse, TrueFalseOption} from "../../../models/questions/true.false";
+import {Choice, ChoiceOption} from "../../../models/questions/choice";
 
-export const QUIZ_4 = new Quiz(
+export const Quiz_00 = new Quiz(
   'MATH 225 Quiz 4',
   [
     new TrueFalse(

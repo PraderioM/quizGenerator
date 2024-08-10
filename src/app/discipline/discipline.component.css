@@ -1,0 +1,12 @@
+.discipline-container {
+  width: 600pt;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  align-content: center;
+  text-align: center;
+}

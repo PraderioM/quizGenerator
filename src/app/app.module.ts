@@ -7,6 +7,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import { QuestionComponent } from './quiz/question/question.component';
 import { ChoiceComponent } from './quiz/question/choice/choice.component';
 import { TrueFalseComponent } from './quiz/question/true-false/true-false.component';
+import { LanguageSelectionComponent } from './language-selection/language-selection.component';
+import { DisciplineComponent } from './discipline/discipline.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TrueFalseComponent } from './quiz/question/true-false/true-false.compon
     QuizComponent,
     QuestionComponent,
     ChoiceComponent,
-    TrueFalseComponent
+    TrueFalseComponent,
+    LanguageSelectionComponent,
+    DisciplineComponent
   ],
   imports: [
     BrowserModule,

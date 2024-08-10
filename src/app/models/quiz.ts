@@ -1,5 +1,4 @@
 import {Question} from "./questions/question";
-import {Tutor} from "./tutors";
 
 export class Quiz {
   constructor(public title: string, public questions: Question[]) {
@@ -31,7 +30,7 @@ export class Quiz {
     return outHTML
   }
 
-  toJSON(name: string, surname: string, workshop: string, tutor: Tutor): {title: string, name: string, surname: string, workshop: string, tutor: string, questions: object[]} {
+  toJSON(name: string, surname: string, workshop: string): {title: string, name: string, surname: string, workshop: string, questions: object[]} {
     let questions: object[] = [];
     for (let question of this.questions) {
       questions.push(question.toJSON());
@@ -41,7 +40,6 @@ export class Quiz {
       'name': name,
       'surname': surname,
       'workshop': workshop,
-      'tutor': tutor.getFullName(),
       'questions': questions
     }
   }
